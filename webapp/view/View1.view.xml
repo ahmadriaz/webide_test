@@ -1,0 +1,22 @@
+<mvc:View controllerName="tcs.oc.name.zbinding.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<f:SimpleForm id="s1" title="title" editable="true" binding="{/Customers('ALFKI')}">
+						<Label text="Id"/>
+						<Input id="c1" width="50%" value="{CustomerID}"/>
+						<Label text="Name"/>
+						<Input id="c2" width="50%" value="{CompanyName}"/>
+					</f:SimpleForm>
+					<List id="l1" headerText="List" items="{/Customers}">
+						<items>
+							<StandardListItem title="{CompanyName}"/>
+						</items>
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
